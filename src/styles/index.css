@@ -1,0 +1,203 @@
+/* Import Tailwind directives */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom component styles */
+.elegant-input .q-field__control {
+  @apply tw-transition-all tw-duration-200;
+}
+
+.elegant-input .q-field--outlined .q-field__control:before {
+  @apply tw-border-gray-300;
+}
+
+.elegant-input .q-field--outlined .q-field__control:hover:before {
+  @apply tw-border-gray-400;
+}
+
+.elegant-input .q-field--outlined.q-field--focused .q-field__control:before {
+  @apply tw-border-blue-500;
+}
+
+.elegant-input .q-field__native {
+  @apply tw-text-gray-900 tw-text-sm;
+}
+
+.elegant-input .q-field__label {
+  @apply tw-text-gray-500 tw-text-sm;
+}
+
+.elegant-input .q-placeholder {
+  @apply tw-text-gray-400;
+}
+
+/* Error state */
+.elegant-input.q-field--error .q-field__control:before {
+  @apply tw-border-red-500;
+}
+
+/* Disabled state */
+.elegant-input.q-field--disabled {
+  @apply tw-opacity-60;
+}
+
+.elegant-input.q-field--disabled .q-field__control {
+  @apply tw-bg-gray-50;
+}
+
+/* Textarea specific styles */
+.elegant-input .q-field__native[type="textarea"] {
+  @apply tw-whitespace-pre-wrap;
+}
+
+/* Table styles */
+.q-table__top {
+  padding: 16px;
+  background: #f8fafc;
+}
+
+.q-table thead tr {
+  background: #f1f5f9;
+}
+
+.q-table tbody td {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.q-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Sticky column styling */
+.my-sticky-column-table th:nth-child(2) {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+.my-sticky-column-table td:nth-child(2) {
+  position: sticky;
+  left: 0;
+  z-index: 50;
+}
+
+/* Filter dialog styling */
+.q-card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+/* Select dropdown styling */
+.elegant-select {
+  position: relative;
+  width: 100%;
+}
+
+.select-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.required-asterisk {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-input {
+  cursor: pointer;
+}
+
+.select-input .q-field__control {
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  color: #6b7280;
+  font-size: 20px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.dropdown-arrow--open {
+  transform: rotate(180deg);
+}
+
+.options-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.search-container {
+  padding: 12px;
+  border-bottom: 1px solid #f3f4f6;
+  background: #fafafa;
+}
+
+.search-input {
+  background: white;
+  border-radius: 6px;
+}
+
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: transparent;
+}
+
+/* Dropdown Animation */
+.dropdown-enter-active {
+  transition: all 0.2s ease-out;
+}
+
+.dropdown-leave-active {
+  transition: all 0.15s ease-in;
+}
+
+.dropdown-enter-from {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+}
+
+.dropdown-leave-to {
+  opacity: 0;
+  transform: translateY(-4px) scale(0.98);
+}
+
+/* Highlight search matches */
+mark {
+  background-color: #fef08a;
+  color: #854d0e;
+  padding: 1px 2px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+/* Line clamp utility */
+.tw-line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
